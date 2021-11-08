@@ -1,0 +1,25 @@
+{
+  "name": "fatec-tpi-world-beauty",
+  "version": "1.0.0",
+  "description": "Atividade prática da disciplina Técnicas de Programação I da FATEC.",
+  "main": "out/view/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "node out/view/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gioliveirass/fatec-TPI-world-beauty.git"
+  },
+  "author": "Giovana Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gioliveirass/fatec-TPI-world-beauty/issues"
+  },
+  "homepage": "https://github.com/gioliveirass/fatec-TPI-world-beauty#readme",
+  "dependencies": {
+    "@types/node": "^16.11.6",
+    "@types/prompt-sync": "^4.1.1",
+    "prompt-sync": "^4.2.0"
+  }
+}
