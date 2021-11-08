@@ -1,6 +1,8 @@
 import Input from "../utils/input";
 import Empresa from "../models/empresa";
 
+import InsercaoProdutosIniciais from "../utils/insercaoProdutosIniciais";
+
 import CadastroCliente from "../controllers/clienteController/cadastroCliente";
 import CadastroProduto from "../controllers/produtoController/cadastroProduto";
 
@@ -16,6 +18,10 @@ console.log("█░░───────────────────�
 
 let empresa = new Empresa();
 let programaEmExecucao = true;
+
+// Inserindo valores iniciais
+let produtosIniciais = new InsercaoProdutosIniciais(empresa.getProdutos);
+produtosIniciais.cadastrar();
 
 while (programaEmExecucao) {
   /* Ínico */

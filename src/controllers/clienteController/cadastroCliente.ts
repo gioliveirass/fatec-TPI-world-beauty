@@ -16,6 +16,10 @@ class CadastroCliente extends Cadastro {
   }
 
   public cadastrar(): void {
+    /* ------------------ */
+    /* Iniciando cadastro */
+    /* ------------------ */
+
     console.log("\n- - - - - - - - - - - - - - - - ");
     console.log("Início do cadastro de cliente");
     console.log("- - - - - - - - - - - - - - - - \n");

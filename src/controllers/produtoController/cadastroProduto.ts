@@ -19,8 +19,9 @@ class CadastroProduto extends Cadastro {
 
     let nomeProduto = this.input.receberTexto("Nome do produto: ");
     let idProduto = this.input.receberNumero("ID do produto: ");
+    let precoProduto = this.input.receberNumero("Preço do produto: ");
 
-    let produto = new Produto(nomeProduto, idProduto);
+    let produto = new Produto(nomeProduto, idProduto, precoProduto);
     this.produtos.push(produto);
 
     console.log("\n✨ Cadastro concluído\n");
