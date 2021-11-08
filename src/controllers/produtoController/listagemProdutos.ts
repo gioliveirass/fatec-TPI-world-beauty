@@ -16,7 +16,8 @@ class ListagemProdutos extends Listagem {
 
     this.produtos.forEach((produto) => {
       console.log("Nome do produto: " + produto.nome);
-      console.log("ID do produto: " + produto.getId + "\n");
+      console.log("ID do produto: " + produto.getId);
+      console.log("Preço do produto: " + produto.preco + "\n");
     });
 
     console.log("\n✨ Listagem concluída\n");
