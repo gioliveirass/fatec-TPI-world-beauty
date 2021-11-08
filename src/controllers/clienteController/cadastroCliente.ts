@@ -116,13 +116,43 @@ class CadastroCliente extends Cadastro {
     /* Cadastrando produtos que utiliza */
     /* --------------------------------- */
 
+    console.log("\nCadastrando produto(s) que o cliente consome...");
+    let produtos: number[] = [];
+    let idProdutoConsumido = this.input.receberNumero("ID do produto: ");
+    produtos.push(idProdutoConsumido);
+
+    console.log("\nDeseja adicionar mais produtos? ");
+    console.log("   1 - Sim");
+    console.log("   2 - Não");
+    let maisProdutos = this.input.receberNumero(
+      "\nDigite o número correspondente à ação desejada: "
+    );
+
+    while (maisProdutos == 1) {
+      console.log("\nCadastrando outro produto...\n");
+      let idOutroProdutoConsumido = this.input.receberNumero("ID do produto: ");
+      produtos.push(idOutroProdutoConsumido);
+
+      console.log("\nDeseja adicionar mais produtos? ");
+      console.log("   1 - Sim");
+      console.log("   2 - Não");
+
+      maisProdutos = this.input.receberNumero(
+        "\nDigite o número correspondente à ação desejada: "
+      );
+    }
+
+    /* -------------------------------- */
+    /* Cadastrando serviços que utiliza */
+    /* -------------------------------- */
+
     // Em breve...
 
     /* ------------------- */
     /* Concluíndo cadastro */
     /* --------------------*/
 
-    let cliente = new Cliente(nome, nomeSocial, cpf, rgs, telefones);
+    let cliente = new Cliente(nome, nomeSocial, cpf, rgs, telefones, produtos);
     this.clientes.push(cliente);
 
     console.log("\n✨ Cadastro concluído\n");

@@ -10,7 +10,7 @@ class Cliente {
   private cpf: CPF;
   private rgs: Array<RG>;
   private telefones: Array<Telefone>;
-  private produtosConsumidos: Array<Produto>;
+  private produtosConsumidos: number[];
   private servicosConsumidos: Array<Servico>;
   private dataCadastro: Date;
 
@@ -19,14 +19,15 @@ class Cliente {
     nomeSocial: string,
     cpf: CPF,
     rg: Array<RG>,
-    telefones: Array<Telefone>
+    telefones: Array<Telefone>,
+    produtosConsumidos: number[]
   ) {
     this.nome = nome;
     this.nomeSocial = nomeSocial;
     this.cpf = cpf;
     this.rgs = rg;
     this.telefones = telefones;
-    this.produtosConsumidos = [];
+    this.produtosConsumidos = produtosConsumidos;
     this.servicosConsumidos = [];
     this.dataCadastro = new Date();
   }
@@ -47,7 +48,7 @@ class Cliente {
     return this.telefones;
   }
 
-  public get getProdutosConsumidos(): Array<Produto> {
+  public get getProdutosConsumidos(): number[] {
     return this.produtosConsumidos;
   }
 
