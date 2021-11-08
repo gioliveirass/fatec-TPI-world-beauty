@@ -108,6 +108,12 @@ class CadastroCliente extends Cadastro {
       telefoneAtual = telefoneAtual + 1;
     }
 
+    /* --------------------------------- */
+    /* Cadastrando produtos que utiliza */
+    /* --------------------------------- */
+
+    // Em breve...
+
     /* ------------------- */
     /* Concluíndo cadastro */
     /* --------------------*/

@@ -4,6 +4,8 @@ import Empresa from "../models/empresa";
 import CadastroCliente from "../controllers/clienteController/cadastroCliente";
 import CadastroProduto from "../controllers/produtoController/cadastroProduto";
 
+import ListagemProdutos from "../controllers/produtoController/listagemProdutos";
+
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
 import exibirInicio from "./menus/inicio";
@@ -39,6 +41,7 @@ while (programaEmExecucao) {
           let cadastroCliente = new CadastroCliente(empresa.getClientes);
           cadastroCliente.cadastrar();
           break;
+
         case 0 /* Voltar ao ínicio */:
           console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
           console.log("\n🏠 De volta ao ínicio 🏠\n");
@@ -61,6 +64,12 @@ while (programaEmExecucao) {
           let cadastroProduto = new CadastroProduto(empresa.getProdutos);
           cadastroProduto.cadastrar();
           break;
+
+        case 2 /* Listagem */:
+          let listagemProdutos = new ListagemProdutos(empresa.getProdutos);
+          listagemProdutos.listar();
+          break;
+
         case 0 /* Voltar ao ínicio */:
           console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
           console.log("\n🏠 De volta ao ínicio 🏠\n");
