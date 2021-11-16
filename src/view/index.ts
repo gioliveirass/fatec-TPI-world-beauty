@@ -2,6 +2,7 @@ import Input from "../utils/input";
 import Empresa from "../models/empresa";
 
 import InsercaoProdutosIniciais from "../utils/insercaoProdutosIniciais";
+import InsercaoServicosIniciais from "../utils/insercaoServicosIniciais";
 
 import CadastroCliente from "../controllers/clienteController/cadastroCliente";
 import CadastroProduto from "../controllers/produtoController/cadastroProduto";
@@ -26,6 +27,10 @@ let programaEmExecucao = true;
 let produtosIniciais = new InsercaoProdutosIniciais(empresa.getProdutos);
 produtosIniciais.cadastrar();
 
+let servicosIniciais = new InsercaoServicosIniciais(empresa.getServicos);
+servicosIniciais.cadastrar();
+
+// Iniciando o programa
 while (programaEmExecucao) {
   /* Ínico */
   exibirInicio();
