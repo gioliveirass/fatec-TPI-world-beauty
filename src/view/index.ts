@@ -8,6 +8,7 @@ import CadastroProduto from "../controllers/produtoController/cadastroProduto";
 import CadastroServico from "../controllers/servicoConstroller/cadastroServico";
 
 import ListagemProdutos from "../controllers/produtoController/listagemProdutos";
+import ListagemServicos from "../controllers/servicoConstroller/listagemServico";
 
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
@@ -105,6 +106,11 @@ while (programaEmExecucao) {
         case 1 /* Cadastro */:
           let cadastroServico = new CadastroServico(empresa.getServicos);
           cadastroServico.cadastrar();
+          break;
+
+        case 2 /* Listagem */:
+          let listagemServicos = new ListagemServicos(empresa.getServicos);
+          listagemServicos.listar();
           break;
 
         case 0 /* Voltar ao ínicio */:
