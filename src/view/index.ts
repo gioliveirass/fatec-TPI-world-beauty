@@ -5,6 +5,7 @@ import InsercaoProdutosIniciais from "../utils/insercaoProdutosIniciais";
 
 import CadastroCliente from "../controllers/clienteController/cadastroCliente";
 import CadastroProduto from "../controllers/produtoController/cadastroProduto";
+import CadastroServico from "../controllers/servicoConstroller/cadastroServico";
 
 import ListagemProdutos from "../controllers/produtoController/listagemProdutos";
 
@@ -94,7 +95,7 @@ while (programaEmExecucao) {
     /* Menu de Serviço */
     /* ---------------- */
 
-    case 2:
+    case 3:
       exibirMenuServico();
       let opcaoMenuServico = input.receberNumero(
         "\nDigite o número correspondente à ação desejada: "
@@ -102,8 +103,8 @@ while (programaEmExecucao) {
 
       switch (opcaoMenuServico) {
         case 1 /* Cadastro */:
-          // let cadastroProduto = new CadastroProduto(empresa.getProdutos);
-          // cadastroProduto.cadastrar();
+          let cadastroServico = new CadastroServico(empresa.getServicos);
+          cadastroServico.cadastrar();
           break;
 
         case 0 /* Voltar ao ínicio */:
