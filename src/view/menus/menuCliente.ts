@@ -1,6 +1,6 @@
 function exibirMenuCliente() {
   console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
-  console.log("\n🙋 Menu do cliente\n");
+  console.log("\n🙋 Menu do Cliente\n");
   console.log("O que você deseja fazer?\n");
   console.log("     1 - Cadastrar cliente");
   console.log("     2 - Vizualizar informações do cliente");

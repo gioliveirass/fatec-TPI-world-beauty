@@ -11,6 +11,7 @@ import ListagemProdutos from "../controllers/produtoController/listagemProdutos"
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
 import exibirInicio from "./menus/inicio";
+import exibirMenuServico from "./menus/menuServico";
 
 console.log("█░░────────────────────────────────────────────────────────░░█");
 console.log("█░░ Boas vindas à agenda de clientes do Grupo World Beauty ░░█");
@@ -32,9 +33,9 @@ while (programaEmExecucao) {
   );
 
   switch (menuEscolhido) {
-    /* --------------- */
-    /* Menu de cliente */
-    /* --------------- */
+    /* ---------------- */
+    /* Menu de Cliente */
+    /* ---------------- */
 
     case 1:
       exibirMenuCliente();
@@ -52,12 +53,15 @@ while (programaEmExecucao) {
           console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
           console.log("\n🏠 De volta ao ínicio 🏠\n");
           break;
+
+        default:
+          console.log("\n▲ Operação não entendida ▲\n");
       }
       break;
 
-    /* ---------------- */
-    /* Menu de Produtos */
-    /* ---------------- */
+    /* --------------- */
+    /* Menu de Produto */
+    /* --------------- */
 
     case 2:
       exibirMenuProduto();
@@ -80,6 +84,35 @@ while (programaEmExecucao) {
           console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
           console.log("\n🏠 De volta ao ínicio 🏠\n");
           break;
+
+        default:
+          console.log("\n▲ Operação não entendida ▲\n");
+      }
+      break;
+
+    /* ---------------- */
+    /* Menu de Serviço */
+    /* ---------------- */
+
+    case 2:
+      exibirMenuServico();
+      let opcaoMenuServico = input.receberNumero(
+        "\nDigite o número correspondente à ação desejada: "
+      );
+
+      switch (opcaoMenuServico) {
+        case 1 /* Cadastro */:
+          // let cadastroProduto = new CadastroProduto(empresa.getProdutos);
+          // cadastroProduto.cadastrar();
+          break;
+
+        case 0 /* Voltar ao ínicio */:
+          console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
+          console.log("\n🏠 De volta ao ínicio 🏠\n");
+          break;
+
+        default:
+          console.log("\n▲ Operação não entendida ▲\n");
       }
       break;
 

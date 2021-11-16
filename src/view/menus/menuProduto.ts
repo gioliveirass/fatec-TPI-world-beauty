@@ -1,6 +1,6 @@
 function exibirMenuProduto() {
   console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
-  console.log("\n🛒 Menu de Produtos\n");
+  console.log("\n🛒 Menu de Produto\n");
   console.log("O que você deseja fazer?\n");
   console.log("     1 - Cadastrar produto");
   console.log("     2 - Vizualizar informações do produto");
