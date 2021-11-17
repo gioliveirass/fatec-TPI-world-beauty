@@ -1,8 +1,8 @@
-import Atualizar from "../atualizar";
+import Atualizacao from "../atualizacao";
 import Input from "../../utils/input";
 import Servico from "../../models/servico";
 
-class AtualizarServico extends Atualizar {
+class AtualizacaoServico extends Atualizacao {
   private servicos: Array<Servico>;
   private input: Input;
 
@@ -66,4 +66,4 @@ class AtualizarServico extends Atualizar {
   }
 }
 
-export default AtualizarServico;
+export default AtualizacaoServico;

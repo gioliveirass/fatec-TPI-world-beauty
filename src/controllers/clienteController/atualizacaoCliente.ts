@@ -1,10 +1,10 @@
-import Atualizar from "../atualizar";
+import Atualizacao from "../atualizacao";
 import Input from "../../utils/input";
 import Cliente from "../../models/cliente";
 import RG from "../../models/rg";
 import Telefone from "../../models/telefone";
 
-class AtualizarCliente extends Atualizar {
+class AtualizacaoCliente extends Atualizacao {
   private clientes: Array<Cliente>;
   private input: Input;
 
@@ -503,4 +503,4 @@ class AtualizarCliente extends Atualizar {
   }
 }
 
-export default AtualizarCliente;
+export default AtualizacaoCliente;

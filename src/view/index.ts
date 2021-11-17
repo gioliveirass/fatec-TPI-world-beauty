@@ -13,9 +13,9 @@ import ListagemProdutos from "../controllers/produtoController/listagemProdutos"
 import ListagemServicos from "../controllers/servicoConstroller/listagemServico";
 import ListagemClientes from "../controllers/clienteController/listagemCliente";
 
-import AtualizarProduto from "../controllers/produtoController/atualizacaoProduto";
-import AtualizarServico from "../controllers/servicoConstroller/atualizacaoServico";
-import AtualizarCliente from "../controllers/clienteController/atualizacaoCliente";
+import AtualizacaoProduto from "../controllers/produtoController/atualizacaoProduto";
+import AtualizacaoServico from "../controllers/servicoConstroller/atualizacaoServico";
+import AtualizacaoCliente from "../controllers/clienteController/atualizacaoCliente";
 
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
@@ -76,8 +76,8 @@ while (programaEmExecucao) {
           break;
 
         case 3 /* Atualização */:
-          let atualizarClientes = new AtualizarCliente(empresa.getClientes);
-          atualizarClientes.atualizar();
+          let atualizacaoClientes = new AtualizacaoCliente(empresa.getClientes);
+          atualizacaoClientes.atualizar();
           break;
 
         case 0 /* Voltar ao ínicio */:
@@ -112,8 +112,8 @@ while (programaEmExecucao) {
           break;
 
         case 3 /* Atualização */:
-          let atualizarProdutos = new AtualizarProduto(empresa.getProdutos);
-          atualizarProdutos.atualizar();
+          let atualizacaoProdutos = new AtualizacaoProduto(empresa.getProdutos);
+          atualizacaoProdutos.atualizar();
           break;
 
         case 0 /* Voltar ao ínicio */:
@@ -148,8 +148,8 @@ while (programaEmExecucao) {
           break;
 
         case 3 /* Atualização */:
-          let atualizarServico = new AtualizarServico(empresa.getServicos);
-          atualizarServico.atualizar();
+          let atualizacaoServico = new AtualizacaoServico(empresa.getServicos);
+          atualizacaoServico.atualizar();
           break;
 
         case 0 /* Voltar ao ínicio */:

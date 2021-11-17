@@ -1,8 +1,8 @@
-import Atualizar from "../atualizar";
+import Atualizacao from "../atualizacao";
 import Input from "../../utils/input";
 import Produto from "../../models/produto";
 
-class AtualizarProduto extends Atualizar {
+class AtualizacaoProduto extends Atualizacao {
   private produtos: Array<Produto>;
   private input: Input;
 
@@ -66,4 +66,4 @@ class AtualizarProduto extends Atualizar {
   }
 }
 
-export default AtualizarProduto;
+export default AtualizacaoProduto;
