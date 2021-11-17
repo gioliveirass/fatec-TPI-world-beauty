@@ -51,11 +51,21 @@ class ListagemClientes extends Listagem {
       /* ------------------------------ */
 
       cliente.getRgs.forEach((RG) => {
-        console.log("Dados do(s) RGs do cliente");
+        console.log("Dados do(s) RG(s) do cliente");
         console.log("      Número do RG: " + RG.getValor);
         console.log(
           "      Data de emissão do RG anterior: " + RG.getDataEmissao
         );
+      });
+
+      /* ------------------------------- */
+      /* Imprimindo telefones do cliente */
+      /* ------------------------------- */
+
+      cliente.getTelefones.forEach((telefone) => {
+        console.log("Dados do(s) telefone(s) do cliente");
+        console.log("      DDD do telefone: " + telefone.getDdd);
+        console.log("      Número do telefone anterior: " + telefone.getNumero);
       });
 
       /* -------------------------------------- */
