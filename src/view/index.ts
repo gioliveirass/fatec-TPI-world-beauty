@@ -21,6 +21,8 @@ import ExclusaoProduto from "../controllers/produtoController/exclusaoProduto";
 import ExclusaoServico from "../controllers/servicoConstroller/exclusaoServico";
 import ExclusaoCliente from "../controllers/clienteController/exclusaoCliente";
 
+import ListagemClientesPorGenero from "../controllers/listagemController/listagemClientesPorGenero";
+
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
 import exibirInicio from "./menus/inicio";
@@ -192,6 +194,15 @@ while (programaEmExecucao) {
       );
 
       switch (opcaoMenuListagem) {
+        case 2 /* Listagem de clientes por gênero */:
+          let listagemClientesPorGenero = new ListagemClientesPorGenero(
+            empresa.getClientes,
+            empresa.getProdutos,
+            empresa.getServicos
+          );
+          listagemClientesPorGenero.listar();
+          break;
+
         case 0 /* Voltar ao ínicio */:
           console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
           console.log("\n🏠 De volta ao ínicio 🏠\n");
