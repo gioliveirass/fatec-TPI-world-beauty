@@ -20,6 +20,7 @@ import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
 import exibirInicio from "./menus/inicio";
 import exibirMenuServico from "./menus/menuServico";
+import exibirMenuListagens from "./menus/menuListagens";
 
 console.log("█░░────────────────────────────────────────────────────────░░█");
 console.log("█░░ Boas vindas à agenda de clientes do Grupo World Beauty ░░█");
@@ -153,6 +154,28 @@ while (programaEmExecucao) {
         default:
           console.log("\n▲ Operação não entendida ▲\n");
       }
+      break;
+
+    /* ----------------- */
+    /* Menu de Listagens */
+    /* ----------------- */
+
+    case 4:
+      exibirMenuListagens();
+      let opcaoMenuListagem = input.receberNumero(
+        "\nDigite o número correspondente à ação desejada: "
+      );
+
+      switch (opcaoMenuListagem) {
+        case 0 /* Voltar ao ínicio */:
+          console.log("\n- - - - - - - - - - - - - - - - - - - - - - -");
+          console.log("\n🏠 De volta ao ínicio 🏠\n");
+          break;
+
+        default:
+          console.log("\n▲ Operação não entendida ▲\n");
+      }
+
       break;
 
     /* ------------------- */
