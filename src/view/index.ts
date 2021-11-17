@@ -15,6 +15,7 @@ import ListagemClientes from "../controllers/clienteController/listagemCliente";
 
 import AtualizarProduto from "../controllers/produtoController/atualizacaoProduto";
 import AtualizarServico from "../controllers/servicoConstroller/atualizacaoServico";
+import AtualizarCliente from "../controllers/clienteController/atualizacaoCliente";
 
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
@@ -72,6 +73,11 @@ while (programaEmExecucao) {
             empresa.getServicos
           );
           listagemClientes.listar();
+          break;
+
+        case 3 /* Atualização */:
+          let atualizarClientes = new AtualizarCliente(empresa.getClientes);
+          atualizarClientes.atualizar();
           break;
 
         case 0 /* Voltar ao ínicio */:

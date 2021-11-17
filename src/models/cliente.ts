@@ -36,6 +36,8 @@ class Cliente {
     this.dataCadastro = new Date();
   }
 
+  // Getters
+
   public get getCpf(): CPF {
     return this.cpf;
   }
@@ -58,6 +60,20 @@ class Cliente {
 
   public get getServicosConsumidos(): number[] {
     return this.servicosConsumidos;
+  }
+
+  // Setters
+
+  public setNome(nome: string) {
+    this.nome = nome;
+  }
+
+  public setNomeSocial(nomeSocial: string) {
+    this.nomeSocial = nomeSocial;
+  }
+
+  public setGenero(genero: number) {
+    this.genero = genero;
   }
 }
 

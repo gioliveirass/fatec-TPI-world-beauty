@@ -42,7 +42,7 @@ class CadastroCliente extends Cadastro {
     /* ---------------------------- */
 
     console.log("\nCadastrando CPF do cliente...");
-    let valor = this.input.receberTexto("Número do CPF: ");
+    let valor = this.input.receberNumero("Número do CPF: ");
     let dataCPF = this.input.receberTexto(
       "Data de emissão do CPF (padrão dd/mm/yyyy): "
     );

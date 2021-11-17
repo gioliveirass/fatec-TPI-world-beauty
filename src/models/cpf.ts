@@ -1,13 +1,13 @@
 class CPF {
-  private valor: string;
+  private valor: number;
   private dataEmissao: Date;
 
-  constructor(valor: string, dataEmissao: Date) {
+  constructor(valor: number, dataEmissao: Date) {
     this.valor = valor;
     this.dataEmissao = dataEmissao;
   }
 
-  public get getValor(): string {
+  public get getValor(): number {
     return this.valor;
   }
 
