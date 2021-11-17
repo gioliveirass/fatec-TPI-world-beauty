@@ -62,7 +62,11 @@ while (programaEmExecucao) {
           break;
 
         case 2 /* Listagem */:
-          let listagemClientes = new ListagemClientes(empresa.getClientes);
+          let listagemClientes = new ListagemClientes(
+            empresa.getClientes,
+            empresa.getProdutos,
+            empresa.getServicos
+          );
           listagemClientes.listar();
           break;
 

@@ -1,13 +1,22 @@
 import Cliente from "../../models/cliente";
 import Listagem from "../listagem";
 import Produto from "../../models/produto";
+import Servico from "../../models/servico";
 
 class ListagemClientes extends Listagem {
   private clientes: Array<Cliente>;
+  private produtos: Array<Produto>;
+  private servicos: Array<Servico>;
 
-  constructor(clientes: Array<Cliente>) {
+  constructor(
+    clientes: Array<Cliente>,
+    produtos: Array<Produto>,
+    servicos: Array<Servico>
+  ) {
     super();
     this.clientes = clientes;
+    this.produtos = produtos;
+    this.servicos = servicos;
   }
 
   public listar(): void {
@@ -41,9 +50,9 @@ class ListagemClientes extends Listagem {
       /* ------------------------------ */
 
       console.log("Dados do CPF do cliente");
-      console.log("     Número do CPF: " + cliente.getCpf.getValor);
+      console.log("      - Número do CPF: " + cliente.getCpf.getValor);
       console.log(
-        "     Data de emissão do CPF anterior: " + cliente.getCpf.getDataEmissao
+        "        Data de emissão do CPF: " + cliente.getCpf.getDataEmissao
       );
 
       /* ------------------------------ */
@@ -52,10 +61,8 @@ class ListagemClientes extends Listagem {
 
       cliente.getRgs.forEach((RG) => {
         console.log("Dados do(s) RG(s) do cliente");
-        console.log("      Número do RG: " + RG.getValor);
-        console.log(
-          "      Data de emissão do RG anterior: " + RG.getDataEmissao
-        );
+        console.log("      - Número do RG: " + RG.getValor);
+        console.log("        Data de emissão do RG: " + RG.getDataEmissao);
       });
 
       /* ------------------------------- */
@@ -64,8 +71,40 @@ class ListagemClientes extends Listagem {
 
       cliente.getTelefones.forEach((telefone) => {
         console.log("Dados do(s) telefone(s) do cliente");
-        console.log("      DDD do telefone: " + telefone.getDdd);
-        console.log("      Número do telefone anterior: " + telefone.getNumero);
+        console.log("      - DDD do telefone: " + telefone.getDdd);
+        console.log("        Número do telefone: " + telefone.getNumero);
+      });
+
+      /* ------------------------------------------- */
+      /* Imprimindo produtos consumidos pelo cliente */
+      /* ------------------------------------------- */
+
+      console.log("Dados do(s) produto(s) consumidos pelo cliente");
+      cliente.getProdutosConsumidos.forEach((produtoConsumido) => {
+        this.produtos.forEach((produtoCadastrado) => {
+          if (produtoConsumido == produtoCadastrado.getId) {
+            console.log("      - Nome do produto: " + produtoCadastrado.nome);
+            console.log(
+              "        Preço do produto: R$" + produtoCadastrado.preco + ",00"
+            );
+          }
+        });
+      });
+
+      /* ------------------------------------------- */
+      /* Imprimindo serviços consumidos pelo cliente */
+      /* ------------------------------------------- */
+
+      console.log("Dados do(s) serviço(s) consumidos pelo cliente");
+      cliente.getServicosConsumidos.forEach((servicosConsumidos) => {
+        this.servicos.forEach((servicosCadastrados) => {
+          if (servicosConsumidos == servicosCadastrados.getId) {
+            console.log("      - Nome do serviço: " + servicosCadastrados.nome);
+            console.log(
+              "        Preço do serviço: R$" + servicosCadastrados.preco + ",00"
+            );
+          }
+        });
       });
 
       /* -------------------------------------- */
