@@ -3,6 +3,7 @@ import Empresa from "../models/empresa";
 
 import InsercaoProdutosIniciais from "../utils/insercaoProdutosIniciais";
 import InsercaoServicosIniciais from "../utils/insercaoServicosIniciais";
+import InsercaoClientesIniciais from "../utils/insercaoClientesIniciais";
 
 import CadastroCliente from "../controllers/clienteController/cadastroCliente";
 import CadastroProduto from "../controllers/produtoController/cadastroProduto";
@@ -29,6 +30,9 @@ produtosIniciais.cadastrar();
 
 let servicosIniciais = new InsercaoServicosIniciais(empresa.getServicos);
 servicosIniciais.cadastrar();
+
+let clientesIniciais = new InsercaoClientesIniciais(empresa.getClientes);
+clientesIniciais.cadastrar();
 
 // Iniciando o programa
 while (programaEmExecucao) {
