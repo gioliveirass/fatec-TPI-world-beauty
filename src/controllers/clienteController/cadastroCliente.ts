@@ -34,7 +34,7 @@ class CadastroCliente extends Cadastro {
     console.log("\nInforme seu gênero: ");
     console.log("   1 - Feminino");
     console.log("   2 - Masculino");
-    console.log("   3 - Outro\n");
+    console.log("   3 - Outro/confidencial\n");
     let genero = this.input.receberNumero("Digite o número correspondente: ");
 
     /* ---------------------------- */
