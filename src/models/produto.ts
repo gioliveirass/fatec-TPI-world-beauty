@@ -9,8 +9,20 @@ class Produto {
     this.preco = preco;
   }
 
+  // Getters
+
   public get getId(): number {
     return this.id;
+  }
+
+  // Setters
+
+  public setNome(nome: string) {
+    this.nome = nome;
+  }
+
+  public setPreco(preco: number) {
+    this.preco = preco;
   }
 }
 
