@@ -12,7 +12,7 @@ class Cliente {
   private rgs: Array<RG>;
   private telefones: Array<Telefone>;
   private produtosConsumidos: number[];
-  private servicosConsumidos: Array<Servico>;
+  private servicosConsumidos: number[];
   private dataCadastro: Date;
 
   constructor(
@@ -22,7 +22,8 @@ class Cliente {
     cpf: CPF,
     rg: Array<RG>,
     telefones: Array<Telefone>,
-    produtosConsumidos: number[]
+    produtosConsumidos: number[],
+    servicosConsumidos: number[]
   ) {
     this.nome = nome;
     this.nomeSocial = nomeSocial;
@@ -31,7 +32,7 @@ class Cliente {
     this.rgs = rg;
     this.telefones = telefones;
     this.produtosConsumidos = produtosConsumidos;
-    this.servicosConsumidos = [];
+    this.servicosConsumidos = servicosConsumidos;
     this.dataCadastro = new Date();
   }
 
@@ -55,7 +56,7 @@ class Cliente {
     return this.produtosConsumidos;
   }
 
-  public get getServicosConsumidos(): Array<Servico> {
+  public get getServicosConsumidos(): number[] {
     return this.servicosConsumidos;
   }
 }

@@ -156,7 +156,31 @@ class CadastroCliente extends Cadastro {
     /* Cadastrando serviços que utiliza */
     /* -------------------------------- */
 
-    // Em breve...
+    console.log("\nCadastrando serviço(s) que o cliente consome...");
+    let servicos: number[] = [];
+    let idServicoConsumido = this.input.receberNumero("ID do serviço: ");
+    servicos.push(idServicoConsumido);
+
+    console.log("\nDeseja adicionar mais serviços? ");
+    console.log("   1 - Sim");
+    console.log("   2 - Não");
+    let maisServicos = this.input.receberNumero(
+      "\nDigite o número correspondente à ação desejada: "
+    );
+
+    while (maisServicos == 1) {
+      console.log("\nCadastrando outro serviço...\n");
+      let idOutroServicoConsumido = this.input.receberNumero("ID do servico: ");
+      servicos.push(idOutroServicoConsumido);
+
+      console.log("\nDeseja adicionar mais serviços? ");
+      console.log("   1 - Sim");
+      console.log("   2 - Não");
+
+      maisProdutos = this.input.receberNumero(
+        "\nDigite o número correspondente à ação desejada: "
+      );
+    }
 
     /* ------------------- */
     /* Concluíndo cadastro */
@@ -169,7 +193,8 @@ class CadastroCliente extends Cadastro {
       cpf,
       rgs,
       telefones,
-      produtos
+      produtos,
+      servicos
     );
     this.clientes.push(cliente);
 
