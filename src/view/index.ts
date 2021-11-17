@@ -13,6 +13,8 @@ import ListagemProdutos from "../controllers/produtoController/listagemProdutos"
 import ListagemServicos from "../controllers/servicoConstroller/listagemServico";
 import ListagemClientes from "../controllers/clienteController/listagemCliente";
 
+import AtualizarProduto from "../controllers/produtoController/atualizacaoProduto";
+
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
 import exibirInicio from "./menus/inicio";
@@ -99,6 +101,11 @@ while (programaEmExecucao) {
         case 2 /* Listagem */:
           let listagemProdutos = new ListagemProdutos(empresa.getProdutos);
           listagemProdutos.listar();
+          break;
+
+        case 3 /* Atualização */:
+          let atualizarProdutos = new AtualizarProduto(empresa.getProdutos);
+          atualizarProdutos.atualizar();
           break;
 
         case 0 /* Voltar ao ínicio */:
