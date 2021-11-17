@@ -179,6 +179,13 @@ class AtualizarCliente extends Atualizar {
             );
 
             cliente.setTelefones(telefonesAtualizadoNovamente);
+
+            console.log("\nDeseja remover mais algum telefone do cliente? ");
+            console.log("   1 - Sim");
+            console.log("   2 - Não");
+            removerMaisTelefones = this.input.receberNumero(
+              "\nDigite o número correspondente à ação desejada: "
+            );
           }
         } else {
           console.log("Ok");
@@ -186,7 +193,7 @@ class AtualizarCliente extends Atualizar {
 
         // Adicionar telefones?
 
-        console.log("\nDeseja adicionar algum telefone? ");
+        console.log("\nDeseja adicionar algum telefone do cliente? ");
         console.log("       1 - Sim");
         console.log("       2 - Não\n");
 
@@ -211,7 +218,7 @@ class AtualizarCliente extends Atualizar {
 
           // Adicionar mais telefones?
 
-          console.log("\nDeseja adicionar mais algum telefone? ");
+          console.log("\nDeseja adicionar mais algum telefone do cliente? ");
           console.log("   1 - Sim");
           console.log("   2 - Não");
           let adicionarMaistelefones = this.input.receberNumero(
@@ -235,6 +242,133 @@ class AtualizarCliente extends Atualizar {
             );
 
             cliente.setTelefones(telefonesAtualizado);
+
+            console.log("\nDeseja adicionar mais algum telefone do cliente? ");
+            console.log("   1 - Sim");
+            console.log("   2 - Não");
+            adicionarMaistelefones = this.input.receberNumero(
+              "\nDigite o número correspondente à ação desejada: "
+            );
+          }
+        } else {
+          console.log("Ok");
+        }
+
+        /* -------------------------------------------- */
+        /* Atualizando produtos consumidos pelo cliente */
+        /* -------------------------------------------- */
+
+        // Remover produto?
+
+        console.log("\nDeseja remover algum produto consumido pelo cliente? ");
+        console.log("       1 - Sim");
+        console.log("       2 - Não\n");
+
+        let removerProduto = this.input.receberNumero(
+          "Digite o número correspondente à ação desejada: "
+        );
+
+        if (removerProduto == 1) {
+          let idProdutoRemovido = this.input.receberNumero(
+            "Digite o ID do produto que deseja remover: "
+          );
+
+          let produtosAtualizados = cliente.getProdutosConsumidos.filter(
+            (produto) => {
+              produto !== idProdutoRemovido;
+            }
+          );
+
+          cliente.setProdutosConsumidos(produtosAtualizados);
+
+          // Remover mais produtos?
+
+          console.log(
+            "\nDeseja remover mais algum produto consumido pelo cliente? "
+          );
+          console.log("   1 - Sim");
+          console.log("   2 - Não");
+          let removerMaisProduto = this.input.receberNumero(
+            "\nDigite o número correspondente à ação desejada: "
+          );
+
+          while (removerMaisProduto == 1) {
+            let idOutroProdutoRemovido = this.input.receberNumero(
+              "Digite o ID do produto que deseja remover: "
+            );
+
+            let produtosAtualizadosNovamente =
+              cliente.getProdutosConsumidos.filter((produto) => {
+                produto !== idOutroProdutoRemovido;
+              });
+
+            cliente.setProdutosConsumidos(produtosAtualizadosNovamente);
+
+            console.log(
+              "\nDeseja remover algum produto consumido pelo cliente? "
+            );
+            console.log("       1 - Sim");
+            console.log("       2 - Não\n");
+
+            removerProduto = this.input.receberNumero(
+              "Digite o número correspondente à ação desejada: "
+            );
+          }
+        } else {
+          console.log("Ok");
+        }
+
+        // Adicionar produtos?
+
+        console.log(
+          "\nDeseja adicionar algum produto consumido pelo cliente? "
+        );
+        console.log("       1 - Sim");
+        console.log("       2 - Não\n");
+
+        let adicionarProduto = this.input.receberNumero(
+          "Digite o número correspondente à ação desejada: "
+        );
+
+        if (adicionarProduto == 1) {
+          let idProdutoAdicionado = this.input.receberNumero(
+            "Digite o ID do produto que deseja adicionar: "
+          );
+
+          let produtosNovos = cliente.getProdutosConsumidos;
+          produtosNovos.push(idProdutoAdicionado);
+
+          cliente.setProdutosConsumidos(produtosNovos);
+
+          // Adicionar mais produtos?
+
+          console.log(
+            "\nDeseja adicionar mais algum produto consumido pelo cliente? "
+          );
+          console.log("   1 - Sim");
+          console.log("   2 - Não");
+          let adicionarMaisProduto = this.input.receberNumero(
+            "\nDigite o número correspondente à ação desejada: "
+          );
+
+          while (adicionarMaisProduto == 1) {
+            let idOutroProdutoAdicionado = this.input.receberNumero(
+              "Digite o ID do produto que deseja adicionar: "
+            );
+
+            let outrosProdutosAdicionados = cliente.getProdutosConsumidos;
+            outrosProdutosAdicionados.push(idOutroProdutoAdicionado);
+
+            cliente.setProdutosConsumidos(outrosProdutosAdicionados);
+
+            console.log(
+              "\nDeseja adicionar mais algum produto consumido pelo cliente? "
+            );
+            console.log("   1 - Sim");
+            console.log("   2 - Não");
+            adicionarMaisProduto = this.input.receberNumero(
+              "\nDigite o número correspondente à ação desejada: "
+            );
           }
         } else {
           console.log("Ok");

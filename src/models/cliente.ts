@@ -83,6 +83,10 @@ class Cliente {
   public setTelefones(telefones: Array<Telefone>) {
     this.telefones = telefones;
   }
+
+  public setProdutosConsumidos(produtosConsumidos: number[]) {
+    this.produtosConsumidos = produtosConsumidos;
+  }
 }
 
 export default Cliente;
