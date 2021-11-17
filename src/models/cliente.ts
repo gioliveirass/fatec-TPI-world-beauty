@@ -7,6 +7,7 @@ import Telefone from "./telefone";
 class Cliente {
   public nome: string;
   public nomeSocial: string;
+  public genero: number;
   private cpf: CPF;
   private rgs: Array<RG>;
   private telefones: Array<Telefone>;
@@ -17,6 +18,7 @@ class Cliente {
   constructor(
     nome: string,
     nomeSocial: string,
+    genero: number,
     cpf: CPF,
     rg: Array<RG>,
     telefones: Array<Telefone>,
@@ -24,6 +26,7 @@ class Cliente {
   ) {
     this.nome = nome;
     this.nomeSocial = nomeSocial;
+    this.genero = genero;
     this.cpf = cpf;
     this.rgs = rg;
     this.telefones = telefones;

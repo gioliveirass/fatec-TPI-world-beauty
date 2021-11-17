@@ -27,6 +27,16 @@ class CadastroCliente extends Cadastro {
     let nome = this.input.receberTexto("Nome do cliente: ");
     let nomeSocial = this.input.receberTexto("Nome social do cliente: ");
 
+    /* ----------------------------- */
+    /* Solicitando gênero do cliente */
+    /* ----------------------------- */
+
+    console.log("\nInforme seu gênero: ");
+    console.log("   1 - Feminino");
+    console.log("   2 - Masculino");
+    console.log("   3 - Outro\n");
+    let genero = this.input.receberNumero("Digite o número correspondente: ");
+
     /* ---------------------------- */
     /* Solicitando e formatando CPF */
     /* ---------------------------- */
@@ -54,7 +64,7 @@ class CadastroCliente extends Cadastro {
     let rgs: Array<RG> = [];
 
     let quantidadeRGs: number = this.input.receberNumero(
-      "Informe a quantidade de RGs a serem cadastrados: : "
+      "Informe a quantidade de RGs a serem cadastrados: "
     );
 
     while (quantidadeRGs <= 0) {
@@ -152,7 +162,15 @@ class CadastroCliente extends Cadastro {
     /* Concluíndo cadastro */
     /* --------------------*/
 
-    let cliente = new Cliente(nome, nomeSocial, cpf, rgs, telefones, produtos);
+    let cliente = new Cliente(
+      nome,
+      nomeSocial,
+      genero,
+      cpf,
+      rgs,
+      telefones,
+      produtos
+    );
     this.clientes.push(cliente);
 
     console.log("\n✨ Cadastro concluído\n");
