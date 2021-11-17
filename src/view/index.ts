@@ -19,6 +19,7 @@ import AtualizacaoCliente from "../controllers/clienteController/atualizacaoClie
 
 import ExclusaoProduto from "../controllers/produtoController/exclusaoProduto";
 import ExclusaoServico from "../controllers/servicoConstroller/exclusaoServico";
+import ExclusaoCliente from "../controllers/clienteController/exclusaoCliente";
 
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
@@ -81,6 +82,11 @@ while (programaEmExecucao) {
         case 3 /* Atualização */:
           let atualizacaoClientes = new AtualizacaoCliente(empresa.getClientes);
           atualizacaoClientes.atualizar();
+          break;
+
+        case 4 /* Exclusão */:
+          let exclusaoClientes = new ExclusaoCliente(empresa);
+          exclusaoClientes.excluir();
           break;
 
         case 0 /* Voltar ao ínicio */:
