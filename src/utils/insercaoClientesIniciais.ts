@@ -220,7 +220,7 @@ class InsercaoClientesIniciais extends Cadastro {
         [new RG(111555111, new Date(2003, 18, 25))],
         [new Telefone(12, 111555111)],
         [19, 20],
-        [3, 8, 9, 10]
+        [8, 9, 10, 11]
       )
     );
 
@@ -276,7 +276,7 @@ class InsercaoClientesIniciais extends Cadastro {
         [new RG(111999111, new Date(2003, 18, 25))],
         [new Telefone(12, 111999111)],
         [3, 4, 10],
-        [1, 2, 3, 4]
+        [1, 2, 3, 4, 11, 12]
       )
     );
 
@@ -290,7 +290,7 @@ class InsercaoClientesIniciais extends Cadastro {
         [new RG(222000222, new Date(2003, 18, 25))],
         [new Telefone(12, 222000222)],
         [11, 12, 13, 14],
-        [1, 8, 9, 10]
+        [1, 8, 9, 11]
       )
     );
 
@@ -304,7 +304,7 @@ class InsercaoClientesIniciais extends Cadastro {
         [new RG(222111222, new Date(2003, 18, 25))],
         [new Telefone(12, 222111222)],
         [11, 12, 13, 14],
-        [1, 8, 9, 10]
+        [1, 8, 9, 11]
       )
     );
 
@@ -318,7 +318,7 @@ class InsercaoClientesIniciais extends Cadastro {
         [new RG(222111112, new Date(2003, 18, 25))],
         [new Telefone(12, 222111112)],
         [13, 14],
-        [1, 9, 10]
+        [1, 9, 10, 11]
       )
     );
 
@@ -332,7 +332,7 @@ class InsercaoClientesIniciais extends Cadastro {
         [new RG(222333222, new Date(2003, 18, 25))],
         [new Telefone(12, 222333222)],
         [15, 16, 17],
-        [1]
+        [1, 11, 12]
       )
     );
 

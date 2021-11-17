@@ -41,6 +41,12 @@ class InsercaoServicosIniciais extends Cadastro {
     this.servicos.push(
       new Servico("Tratamento para redução de medidas", 10, 1000)
     );
+
+    // 11
+    this.servicos.push(new Servico("Modelagem e corte de barba", 11, 20));
+
+    // 12
+    this.servicos.push(new Servico("Tratamento de queda de cabelo", 12, 100));
   }
 }
 
