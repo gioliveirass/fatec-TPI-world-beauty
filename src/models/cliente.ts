@@ -20,7 +20,7 @@ class Cliente {
     nomeSocial: string,
     genero: number,
     cpf: CPF,
-    rg: Array<RG>,
+    rgs: Array<RG>,
     telefones: Array<Telefone>,
     produtosConsumidos: number[],
     servicosConsumidos: number[]
@@ -29,7 +29,7 @@ class Cliente {
     this.nomeSocial = nomeSocial;
     this.genero = genero;
     this.cpf = cpf;
-    this.rgs = rg;
+    this.rgs = rgs;
     this.telefones = telefones;
     this.produtosConsumidos = produtosConsumidos;
     this.servicosConsumidos = servicosConsumidos;
@@ -74,6 +74,14 @@ class Cliente {
 
   public setGenero(genero: number) {
     this.genero = genero;
+  }
+
+  public setRgs(rgs: Array<RG>) {
+    this.rgs = rgs;
+  }
+
+  public setTelefones(telefones: Array<Telefone>) {
+    this.telefones = telefones;
   }
 }
 

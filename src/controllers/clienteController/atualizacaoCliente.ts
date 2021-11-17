@@ -1,6 +1,8 @@
 import Atualizar from "../atualizar";
 import Input from "../../utils/input";
 import Cliente from "../../models/cliente";
+import RG from "../../models/rg";
+import Telefone from "../../models/telefone";
 
 class AtualizarCliente extends Atualizar {
   private clientes: Array<Cliente>;
@@ -86,6 +88,154 @@ class AtualizarCliente extends Atualizar {
             "Digite o número correspondente: "
           );
           cliente.setGenero(generoNovo);
+        } else {
+          console.log("Ok");
+        }
+
+        /* -------------------------- */
+        /* Atualizando RGs do cliente */
+        /* -------------------------- */
+
+        console.log("\nDeseja adicionar um novo RG do cliente? ");
+        console.log("       1 - Sim");
+        console.log("       2 - Não\n");
+
+        let novoRg = this.input.receberNumero(
+          "Digite o número correspondente à ação desejada: "
+        );
+
+        if (novoRg == 1) {
+          let numeroRG = this.input.receberNumero("\nNúmero do RG: ");
+          let dataRG = this.input.receberTexto(
+            "Data de emissão do RG (padrão dd/mm/yyyy): "
+          );
+
+          let partesDataRG = dataRG.split("/");
+
+          let ano = new Number(partesDataRG[2].valueOf()).valueOf();
+          let mes = new Number(partesDataRG[1].valueOf()).valueOf();
+          let dia = new Number(partesDataRG[0].valueOf()).valueOf();
+          let dataEmissaoRG = new Date(ano, mes, dia);
+
+          let rgs = cliente.getRgs;
+          rgs.push(new RG(numeroRG, dataEmissaoRG));
+
+          cliente.setRgs(rgs);
+        } else {
+          console.log("Ok");
+        }
+
+        /* -------------------------------- */
+        /* Atualizando telefones do cliente */
+        /* -------------------------------- */
+
+        // Remover telefone?
+
+        console.log("\nDeseja remover algum telefone do cliente? ");
+        console.log("       1 - Sim");
+        console.log("       2 - Não\n");
+
+        let removerTelefone = this.input.receberNumero(
+          "Digite o número correspondente à ação desejada: "
+        );
+
+        if (removerTelefone == 1) {
+          let dddTelefone = this.input.receberNumero(
+            "DDD do telefone que que será removido: "
+          );
+          let numeroTelefone = this.input.receberNumero(
+            "Número do telefone que será removido: "
+          );
+
+          let telefonesAtualizado = cliente.getTelefones.filter((telefone) => {
+            telefone.getDdd !== dddTelefone &&
+              telefone.getNumero !== numeroTelefone;
+          });
+
+          cliente.setTelefones(telefonesAtualizado);
+
+          // Remover mais telefones?
+
+          console.log("\nDeseja remover mais algum telefone do cliente? ");
+          console.log("   1 - Sim");
+          console.log("   2 - Não");
+          let removerMaisTelefones = this.input.receberNumero(
+            "\nDigite o número correspondente à ação desejada: "
+          );
+
+          while (removerMaisTelefones == 1) {
+            let dddOutroTelefone = this.input.receberNumero(
+              "DDD do telefone que que será removido: "
+            );
+            let numeroOutroTelefone = this.input.receberNumero(
+              "Número do telefone que será removido: "
+            );
+
+            let telefonesAtualizadoNovamente = cliente.getTelefones.filter(
+              (telefone) => {
+                telefone.getDdd !== dddOutroTelefone &&
+                  telefone.getNumero !== numeroOutroTelefone;
+              }
+            );
+
+            cliente.setTelefones(telefonesAtualizadoNovamente);
+          }
+        } else {
+          console.log("Ok");
+        }
+
+        // Adicionar telefones?
+
+        console.log("\nDeseja adicionar algum telefone? ");
+        console.log("       1 - Sim");
+        console.log("       2 - Não\n");
+
+        let adicionarTelefone = this.input.receberNumero(
+          "Digite o número correspondente à ação desejada: "
+        );
+
+        if (adicionarTelefone == 1) {
+          let dddTelefoneNovo = this.input.receberNumero(
+            "DDD do telefone que que será adicionado: "
+          );
+          let numeroTelefoneNovo = this.input.receberNumero(
+            "Número do telefone que será adicionado: "
+          );
+
+          let telefonesAtualizado = cliente.getTelefones;
+          telefonesAtualizado.push(
+            new Telefone(dddTelefoneNovo, numeroTelefoneNovo)
+          );
+
+          cliente.setTelefones(telefonesAtualizado);
+
+          // Adicionar mais telefones?
+
+          console.log("\nDeseja adicionar mais algum telefone? ");
+          console.log("   1 - Sim");
+          console.log("   2 - Não");
+          let adicionarMaistelefones = this.input.receberNumero(
+            "\nDigite o número correspondente à ação desejada: "
+          );
+
+          while (adicionarMaistelefones == 1) {
+            let dddOutroTelefoneAdicionado = this.input.receberNumero(
+              "DDD do telefone que que será adicionado: "
+            );
+            let numeroOutroTelefoneAdicionado = this.input.receberNumero(
+              "Número do telefone que será adicionado: "
+            );
+
+            let telefonesAtualizado = cliente.getTelefones;
+            telefonesAtualizado.push(
+              new Telefone(
+                dddOutroTelefoneAdicionado,
+                numeroOutroTelefoneAdicionado
+              )
+            );
+
+            cliente.setTelefones(telefonesAtualizado);
+          }
         } else {
           console.log("Ok");
         }
