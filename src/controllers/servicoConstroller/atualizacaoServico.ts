@@ -1,14 +1,14 @@
 import Atualizar from "../atualizar";
 import Input from "../../utils/input";
-import Produto from "../../models/produto";
+import Servico from "../../models/servico";
 
-class AtualizarProduto extends Atualizar {
-  private produtos: Array<Produto>;
+class AtualizarServico extends Atualizar {
+  private servicos: Array<Servico>;
   private input: Input;
 
-  constructor(produtos: Array<Produto>) {
+  constructor(servicos: Array<Servico>) {
     super();
-    this.produtos = produtos;
+    this.servicos = servicos;
     this.input = new Input();
   }
 
@@ -21,9 +21,9 @@ class AtualizarProduto extends Atualizar {
       "ID do produto que você deseja atualizar: "
     );
 
-    this.produtos.forEach((produto) => {
-      if (idProduto == produto.getId) {
-        console.log("\nDeseja atualizar o nome do produto? ");
+    this.servicos.forEach((servico) => {
+      if (idProduto == servico.getId) {
+        console.log("\nDeseja atualizar o nome do serviço? ");
         console.log("       1 - Sim");
         console.log("       2 - Não\n");
 
@@ -33,14 +33,14 @@ class AtualizarProduto extends Atualizar {
 
         if (atualizarNome == 1) {
           let nomeNovo = this.input.receberTexto(
-            "Digite o nome novo do produto: "
+            "Digite o nome novo do serviço: "
           );
-          produto.setNome(nomeNovo);
+          servico.setNome(nomeNovo);
         } else {
           console.log("Ok");
         }
 
-        console.log("\nDeseja atualizar o preço do produto? ");
+        console.log("\nDeseja atualizar o preço do serviço? ");
         console.log("       1 - Sim");
         console.log("       2 - Não\n");
 
@@ -50,9 +50,9 @@ class AtualizarProduto extends Atualizar {
 
         if (atualizarPreco == 1) {
           let precoNovo = this.input.receberNumero(
-            "Digite o preço novo do produto: "
+            "Digite o preço novo do serviço: "
           );
-          produto.setPreco(precoNovo);
+          servico.setPreco(precoNovo);
         } else {
           console.log("Ok");
         }
@@ -66,4 +66,4 @@ class AtualizarProduto extends Atualizar {
   }
 }
 
-export default AtualizarProduto;
+export default AtualizarServico;
