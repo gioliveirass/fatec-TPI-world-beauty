@@ -157,8 +157,8 @@ class AtualizarCliente extends Atualizar {
           // Remover mais telefones?
 
           console.log("\nDeseja remover mais algum telefone do cliente? ");
-          console.log("   1 - Sim");
-          console.log("   2 - Não");
+          console.log("       1 - Sim");
+          console.log("       2 - Não");
           let removerMaisTelefones = this.input.receberNumero(
             "\nDigite o número correspondente à ação desejada: "
           );
@@ -181,8 +181,8 @@ class AtualizarCliente extends Atualizar {
             cliente.setTelefones(telefonesAtualizadoNovamente);
 
             console.log("\nDeseja remover mais algum telefone do cliente? ");
-            console.log("   1 - Sim");
-            console.log("   2 - Não");
+            console.log("       1 - Sim");
+            console.log("       2 - Não");
             removerMaisTelefones = this.input.receberNumero(
               "\nDigite o número correspondente à ação desejada: "
             );
@@ -219,8 +219,8 @@ class AtualizarCliente extends Atualizar {
           // Adicionar mais telefones?
 
           console.log("\nDeseja adicionar mais algum telefone do cliente? ");
-          console.log("   1 - Sim");
-          console.log("   2 - Não");
+          console.log("       1 - Sim");
+          console.log("       2 - Não");
           let adicionarMaistelefones = this.input.receberNumero(
             "\nDigite o número correspondente à ação desejada: "
           );
@@ -244,8 +244,8 @@ class AtualizarCliente extends Atualizar {
             cliente.setTelefones(telefonesAtualizado);
 
             console.log("\nDeseja adicionar mais algum telefone do cliente? ");
-            console.log("   1 - Sim");
-            console.log("   2 - Não");
+            console.log("       1 - Sim");
+            console.log("       2 - Não");
             adicionarMaistelefones = this.input.receberNumero(
               "\nDigite o número correspondente à ação desejada: "
             );
@@ -286,8 +286,8 @@ class AtualizarCliente extends Atualizar {
           console.log(
             "\nDeseja remover mais algum produto consumido pelo cliente? "
           );
-          console.log("   1 - Sim");
-          console.log("   2 - Não");
+          console.log("       1 - Sim");
+          console.log("       2 - Não");
           let removerMaisProduto = this.input.receberNumero(
             "\nDigite o número correspondente à ação desejada: "
           );
@@ -345,8 +345,8 @@ class AtualizarCliente extends Atualizar {
           console.log(
             "\nDeseja adicionar mais algum produto consumido pelo cliente? "
           );
-          console.log("   1 - Sim");
-          console.log("   2 - Não");
+          console.log("       1 - Sim");
+          console.log("       2 - Não");
           let adicionarMaisProduto = this.input.receberNumero(
             "\nDigite o número correspondente à ação desejada: "
           );
@@ -364,9 +364,129 @@ class AtualizarCliente extends Atualizar {
             console.log(
               "\nDeseja adicionar mais algum produto consumido pelo cliente? "
             );
-            console.log("   1 - Sim");
-            console.log("   2 - Não");
+            console.log("       1 - Sim");
+            console.log("       2 - Não");
             adicionarMaisProduto = this.input.receberNumero(
+              "\nDigite o número correspondente à ação desejada: "
+            );
+          }
+        } else {
+          console.log("Ok");
+        }
+
+        /* -------------------------------------------- */
+        /* Atualizando serviços consumidos pelo cliente */
+        /* -------------------------------------------- */
+
+        // Remover serviço?
+
+        console.log("\nDeseja remover algum serviço consumido pelo cliente? ");
+        console.log("       1 - Sim");
+        console.log("       2 - Não\n");
+
+        let removerServico = this.input.receberNumero(
+          "Digite o número correspondente à ação desejada: "
+        );
+
+        if (removerServico == 1) {
+          let idServicoRemovido = this.input.receberNumero(
+            "Digite o ID do servico que deseja remover: "
+          );
+
+          let servicosAtualizados = cliente.getServicosConsumidos.filter(
+            (servico) => {
+              servico !== idServicoRemovido;
+            }
+          );
+
+          cliente.setProdutosConsumidos(servicosAtualizados);
+
+          // Remover mais serviços?
+
+          console.log(
+            "\nDeseja remover mais algum serviço consumido pelo cliente? "
+          );
+          console.log("       1 - Sim");
+          console.log("       2 - Não");
+          let removerMaisServico = this.input.receberNumero(
+            "\nDigite o número correspondente à ação desejada: "
+          );
+
+          while (removerMaisServico == 1) {
+            let idOutroServicoRemovido = this.input.receberNumero(
+              "Digite o ID do serviço que deseja remover: "
+            );
+
+            let servicosAtualizadosNovamente =
+              cliente.getServicosConsumidos.filter((servico) => {
+                servico !== idOutroServicoRemovido;
+              });
+
+            cliente.setServicosConsumidos(servicosAtualizadosNovamente);
+
+            console.log(
+              "\nDeseja remover algum serviço consumido pelo cliente? "
+            );
+            console.log("       1 - Sim");
+            console.log("       2 - Não\n");
+
+            removerServico = this.input.receberNumero(
+              "Digite o número correspondente à ação desejada: "
+            );
+          }
+        } else {
+          console.log("Ok");
+        }
+
+        // Adicionar serviços?
+
+        console.log(
+          "\nDeseja adicionar algum serviço consumido pelo cliente? "
+        );
+        console.log("       1 - Sim");
+        console.log("       2 - Não\n");
+
+        let adicionarServico = this.input.receberNumero(
+          "Digite o número correspondente à ação desejada: "
+        );
+
+        if (adicionarServico == 1) {
+          let idServicoAdicionado = this.input.receberNumero(
+            "Digite o ID do serviço que deseja adicionar: "
+          );
+
+          let servicoNovos = cliente.getServicosConsumidos;
+          servicoNovos.push(idServicoAdicionado);
+
+          cliente.setServicosConsumidos(servicoNovos);
+
+          // Adicionar mais produtos?
+
+          console.log(
+            "\nDeseja adicionar mais algum serviço consumido pelo cliente? "
+          );
+          console.log("       1 - Sim");
+          console.log("       2 - Não");
+          let adicionarMaisServico = this.input.receberNumero(
+            "\nDigite o número correspondente à ação desejada: "
+          );
+
+          while (adicionarMaisServico == 1) {
+            let idOutroServicoAdicionado = this.input.receberNumero(
+              "Digite o ID do serviço que deseja adicionar: "
+            );
+
+            let outrosServicosAdicionados = cliente.getServicosConsumidos;
+            outrosServicosAdicionados.push(idOutroServicoAdicionado);
+
+            cliente.setServicosConsumidos(outrosServicosAdicionados);
+
+            console.log(
+              "\nDeseja adicionar mais algum serviço consumido pelo cliente? "
+            );
+            console.log("       1 - Sim");
+            console.log("       2 - Não");
+            adicionarMaisServico = this.input.receberNumero(
               "\nDigite o número correspondente à ação desejada: "
             );
           }

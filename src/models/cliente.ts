@@ -87,6 +87,10 @@ class Cliente {
   public setProdutosConsumidos(produtosConsumidos: number[]) {
     this.produtosConsumidos = produtosConsumidos;
   }
+
+  public setServicosConsumidos(servicosConsumidos: number[]) {
+    this.servicosConsumidos = servicosConsumidos;
+  }
 }
 
 export default Cliente;
