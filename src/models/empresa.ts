@@ -13,6 +13,8 @@ export default class Empresa {
     this.servicos = [];
   }
 
+  // Getters
+
   public get getClientes() {
     return this.clientes;
   }
@@ -23,5 +25,19 @@ export default class Empresa {
 
   public get getServicos() {
     return this.servicos;
+  }
+
+  // Setters
+
+  public setClientes(clientes: Array<Cliente>) {
+    this.clientes = clientes;
+  }
+
+  public setProdutos(produtos: Array<Produto>) {
+    this.produtos = produtos;
+  }
+
+  public setServicos(servicos: Array<Servico>) {
+    this.servicos = servicos;
   }
 }
