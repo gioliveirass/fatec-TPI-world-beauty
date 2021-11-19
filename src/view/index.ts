@@ -26,6 +26,7 @@ import ListagemClientesPorGenero from "../controllers/listagemController/listage
 import ListagemMenorConsumoEmQuantidade from "../controllers/listagemController/listagemMenorConsumoEmQuantidade";
 import ListagemConsumoEmValor from "../controllers/listagemController/listagemConsumoEmValor";
 import ListagemConsumoProdutos from "../controllers/listagemController/listagemConsumoProdutos";
+import ListagemConsumoProdutosPorGenero from "../controllers/listagemController/listagemProdutoConsumoPorGenero";
 
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
@@ -223,6 +224,16 @@ while (programaEmExecucao) {
             empresa.getServicos
           );
           listagemConsumoProdutos.listar();
+          break;
+
+        case 4 /* Listagem de serviços/produtos mais consumidos por gênero*/:
+          let listagemConsumoProdutosPorGenero =
+            new ListagemConsumoProdutosPorGenero(
+              empresa.getClientes,
+              empresa.getProdutos,
+              empresa.getServicos
+            );
+          listagemConsumoProdutosPorGenero.listar();
           break;
 
         case 5 /* Listagem de clientes que menoos consumiram em quantidade */:

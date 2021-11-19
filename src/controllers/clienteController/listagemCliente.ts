@@ -33,15 +33,15 @@ class ListagemClientes extends Listagem {
       /* ------------------------------ */
 
       switch (cliente.genero) {
-        case 1 /* Cadastro */:
+        case 1 /* Feminono */:
           console.log("Gênero do cliente: Feminino");
           break;
 
-        case 2 /* Listagem */:
+        case 2 /* Masculino */:
           console.log("Gênero do cliente: Masculino");
           break;
 
-        case 3 /* Voltar ao ínicio */:
+        case 3 /* Outro/confidencial */:
           console.log("Gênero do cliente: Outro/confidencial");
           break;
       }
