@@ -21,6 +21,7 @@ import ExclusaoProduto from "../controllers/produtoController/exclusaoProduto";
 import ExclusaoServico from "../controllers/servicoConstroller/exclusaoServico";
 import ExclusaoCliente from "../controllers/clienteController/exclusaoCliente";
 
+import ListagemConsumoEmQuantidade from "../controllers/listagemController/listagemConsumeEmQuantidade";
 import ListagemClientesPorGenero from "../controllers/listagemController/listagemClientesPorGenero";
 
 import exibirMenuCliente from "./menus/menuCliente";
@@ -194,6 +195,15 @@ while (programaEmExecucao) {
       );
 
       switch (opcaoMenuListagem) {
+        case 1 /* Listagem clientes que mais consumiram em quantidade */:
+          let listagemConsumoEmQuantidade = new ListagemConsumoEmQuantidade(
+            empresa.getClientes,
+            empresa.getProdutos,
+            empresa.getServicos
+          );
+          listagemConsumoEmQuantidade.listar();
+          break;
+
         case 2 /* Listagem de clientes por gênero */:
           let listagemClientesPorGenero = new ListagemClientesPorGenero(
             empresa.getClientes,
