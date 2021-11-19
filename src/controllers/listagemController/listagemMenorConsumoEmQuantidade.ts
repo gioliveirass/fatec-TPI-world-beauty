@@ -3,7 +3,7 @@ import Listagem from "../listagem";
 import Produto from "../../models/produto";
 import Servico from "../../models/servico";
 
-class ListagemConsumoEmQuantidade extends Listagem {
+class ListagemMenorConsumoEmQuantidade extends Listagem {
   private clientes: Array<Cliente>;
   private produtos: Array<Produto>;
   private servicos: Array<Servico>;
@@ -24,7 +24,7 @@ class ListagemConsumoEmQuantidade extends Listagem {
       "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
     );
     console.log(
-      "Listagem de 10 clientes que mais consumiram produtos/serviços em quantidade"
+      "Listagem de 10 clientes que menos consumiram produtos/serviços em quantidade"
     );
     console.log(
       "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
@@ -52,7 +52,11 @@ class ListagemConsumoEmQuantidade extends Listagem {
 
     // Ordenando o array de objetos
     consumoClientesOrdenado = consumoClientesPorQuantidade.sort((a, b) => {
-      return b.quantidadeTotalConsumida - a.quantidadeTotalConsumida;
+      return a.quantidadeTotalConsumida > b.quantidadeTotalConsumida
+        ? 1
+        : b.quantidadeTotalConsumida > a.quantidadeTotalConsumida
+        ? -1
+        : 0;
     });
 
     // Limitando quantidade de pessoas
@@ -174,4 +178,4 @@ class ListagemConsumoEmQuantidade extends Listagem {
   }
 }
 
-export default ListagemConsumoEmQuantidade;
+export default ListagemMenorConsumoEmQuantidade;
