@@ -21,9 +21,10 @@ import ExclusaoProduto from "../controllers/produtoController/exclusaoProduto";
 import ExclusaoServico from "../controllers/servicoConstroller/exclusaoServico";
 import ExclusaoCliente from "../controllers/clienteController/exclusaoCliente";
 
-import ListagemConsumoEmQuantidade from "../controllers/listagemController/listagemConsumeEmQuantidade";
+import ListagemConsumoEmQuantidade from "../controllers/listagemController/listagemConsumoEmQuantidade";
 import ListagemClientesPorGenero from "../controllers/listagemController/listagemClientesPorGenero";
 import ListagemMenorConsumoEmQuantidade from "../controllers/listagemController/listagemMenorConsumoEmQuantidade";
+import ListagemConsumoEmValor from "../controllers/listagemController/listagemConsumoEmValor";
 
 import exibirMenuCliente from "./menus/menuCliente";
 import exibirMenuProduto from "./menus/menuProduto";
@@ -222,6 +223,15 @@ while (programaEmExecucao) {
               empresa.getServicos
             );
           listagemMenorConsumoEmQuantidade.listar();
+          break;
+
+        case 6 /* Listagem clientes que mais consumiram em valor */:
+          let listagemConsumoEmValor = new ListagemConsumoEmValor(
+            empresa.getClientes,
+            empresa.getProdutos,
+            empresa.getServicos
+          );
+          listagemConsumoEmValor.listar();
           break;
 
         case 0 /* Voltar ao ínicio */:
