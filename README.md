@@ -61,7 +61,7 @@ Todas as listagens exigidas foram implementadas no sistema, e é possível confe
 
 Todo o código da aplicação pode ser encontrado dentro da pasta [/src](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src), que é dividida em três subpastas:
 
-- 📁 [/model](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src/models): Onde ficam as classes que definem o cliente, produto, serviço, empresa, CPF, telefone e RG.
+- 📁 [/models](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src/models): Onde ficam as classes que definem o cliente, produto, serviço, empresa, CPF, telefone e RG.
 - 📁 [/view](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src/view): Onde fica parte visual da aplicação. Nesse caso, contém o index da aplicação e as opções de cada menu.
 - 📁 [/controllers](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src/controllers): Onde ficam as classes de cada funcionalidade gerada.
 - 📁 [/utils](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src/utils): Classes auxiliares, que podem ser importadas em vários outros arquivos se houver necessidade.
