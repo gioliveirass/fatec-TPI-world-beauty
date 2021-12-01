@@ -28,19 +28,19 @@ De acordo com os requisitos apresentados pelo professor, foram desenvolvidas as 
 
 Opções de cadastrar um novo cliente, listar todos os clientes, atualizar informações de um cliente e deletar o cadastro de um cliente. Veja abaixo uma demonstração dessa funcionalidade:
 
-![Demonstração do CRUD de Clientes](/.github/clientesCRUD)
+![Demonstração do CRUD de Clientes](/.github/clientesCRUD.gif)
 
 ### 🖥 CRUD de Produtos
 
 Opções de cadastrar um novo produto, listar todos os produtos, atualizar informações de um produto e deletar o cadastro de um produto. Veja abaixo uma demonstração dessa funcionalidade:
 
-![Demonstração do CRUD de Produtos](/.github/produtosCRUD)
+![Demonstração do CRUD de Produtos](/.github/produtosCRUD.gif)
 
 ### 🖥 CRUD de Serviços
 
 Opções de cadastrar um novo serviço, listar todos os serviços, atualizar informações de um serviço e deletar o cadastro de um serviço. Veja abaixo uma demonstração dessa funcionalidade:
 
-![Demonstração do CRUD de Serviços](/.github/servicosCRUD)
+![Demonstração do CRUD de Serviços](/.github/servicosCRUD.gif)
 
 ### 🖥 Listagens importantes
 
@@ -55,7 +55,7 @@ Foram solicitadas seis tipos de listagens diferentes, sendo elas:
 
 Todas as listagens exigidas foram implementadas no sistema, e é possível conferir abaixo uma breve demonstração delas:
 
-![Demonstração das listagens importantes](/.github/listagens)
+![Demonstração das listagens importantes](/.github/listagens.gif)
 
 ## <a id="arquivos-pastas"> Arquivos e pastas </a>
 
