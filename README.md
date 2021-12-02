@@ -3,14 +3,24 @@
 </h1>
 
 <p align="center"> 
-  <a href="#descricao"> Descrição do projeto </a> • <a href="#tecnologias">Tecnologias utilizadas </a> • <a href="#funcionalidades"> Funcionalidades </a> • <a href="#arquivos-pastas"> Arquivos e pastas </a>  • <a href="#executando"> Executando a aplicação </a> 
+  <a href="#descricao"> Descrição do projeto </a> • <a href="#diagrama"> Diagrama de classes </a> • <a href="#tecnologias">Tecnologias utilizadas </a> • <a href="#funcionalidades"> Funcionalidades </a> • <a href="#arquivos-pastas"> Arquivos e pastas </a>  • <a href="#executando"> Executando a aplicação </a> • <a href="#licenca"> Licença </a>
 </p>
 
 ## <a id="descricao"> Descrição do projeto </a>
 
 Atividade prática desenvolvida na disciplina Técnicas de Programação I da Faculdade de Tecnologia de São José dos Campos, que consiste na criação de um sistema do tipo CLI (command-line interface) que tem como objetivo suprir as necessidades do grupo fictício World Beauty (WB). Todos os requisitos foram disponibilizados pelo professor através de um documento em PDF.
 
->📌 Status do projeto: Finalizado.
+> 📌 Status do projeto: Finalizado.
+
+<a href="#topo">↑ voltar ao topo </a>
+
+## <a id="diagrama"> Diagrama de classes </a>
+
+Abaixo é possível vizualisar o diagrama de classes desenvolvido:
+
+![Diagrama de classes](/.github/WB_Diagrama_de_classe.png)
+
+<a href="#topo">↑ voltar ao topo </a>
 
 ## <a id="tecnologias"> Tecnologias utilizadas </a>
 
@@ -19,6 +29,9 @@ Atividade prática desenvolvida na disciplina Técnicas de Programação I da Fa
 ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Diagrams.net](https://img.shields.io/badge/Diagrams.net-F08705?style=for-the-badge&logo=diagramsdotnet&logoColor=white)
+
+<a href="#topo">↑ voltar ao topo </a>
 
 ## <a id="funcionalidades"> Funcionalidades </a>
 
@@ -57,6 +70,8 @@ Todas as listagens exigidas foram implementadas no sistema, e é possível confe
 
 ![Demonstração das listagens importantes](/.github/listagens.gif)
 
+<a href="#topo">↑ voltar ao topo </a>
+
 ## <a id="arquivos-pastas"> Arquivos e pastas </a>
 
 Todo o código da aplicação pode ser encontrado dentro da pasta [/src](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src), que é dividida em três subpastas:
@@ -66,13 +81,15 @@ Todo o código da aplicação pode ser encontrado dentro da pasta [/src](https:/
 - 📁 [/controllers](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src/controllers): Onde ficam as classes de cada funcionalidade gerada.
 - 📁 [/utils](https://github.com/gioliveirass/fatec-TPI-world-beauty/tree/main/src/utils): Classes auxiliares, que podem ser importadas em vários outros arquivos se houver necessidade.
 
-## <a id="executando"> Executando a aplicação  </a>
+<a href="#topo">↑ voltar ao topo </a>
 
-Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório. Se já tiver feito as instalações necessárias, clone o projeto, abra sua pasta no terminal e execute as linhas de comando:
+## <a id="executando"> Executando a aplicação </a>
+
+Para que o projeto funcione em sua máquina, você precisa ter instalado o [Node.js](https://nodejs.org/en/) e o [TypeScript](https://www.typescriptlang.org/download). Também é necessário instalar o [Git](https://git-scm.com/) para clonar o repositório. Se já tiver feito as instalações necessárias, clone o projeto, abra sua pasta no terminal e execute as linhas de comando:
 
 ```powershell
 # Para instalar as dependências:
-$ npm install 
+$ npm install
 
 # Para compilar o TypeScript:
 $ tsc
@@ -80,6 +97,14 @@ $ tsc
 # Para rodar o projeto:
 $ npm run app
 ```
+
+<a href="#topo">↑ voltar ao topo </a>
+
+## <a id="licenca"> Licença </a>
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/gioliveirass/fatec-TPI-world-beauty/blob/main/LICENSE) para mais detalhes.
+
+<a href="#topo">↑ voltar ao topo </a>
 
 <hr>
 <p align="center">
