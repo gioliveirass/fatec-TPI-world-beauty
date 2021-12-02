@@ -16,7 +16,7 @@ Atividade prática desenvolvida na disciplina Técnicas de Programação I da Fa
 
 ## <a id="diagrama"> Diagrama de classes </a>
 
-Abaixo é possível vizualisar o diagrama de classes desenvolvido:
+Abaixo é possível vizualisar o diagrama de classes desenvolvido, que representa a estrutura e os relacionamentos entre as classes que compõem o projeto:
 
 ![Diagrama de classes](/.github/WB_Diagrama_de_classe.png)
 
